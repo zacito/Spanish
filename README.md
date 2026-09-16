@@ -1,21 +1,14 @@
-# Spanish Flashcards App
-A simple, no-frills Android flashcard app for learning beginner Spanish.
-40 common words and phrases with English translations.
+# Spanish Flashcards
 
-- **Tap the card** (or the Flip button) to flip between Spanish and English
-- **← Prev / Next →** to move through the deck (wraps around)
-- **Shuffle** to randomize the deck order
+A simple Android flashcard app for learning Spanish. Pick a group (Colors, Days of the Week, Months, Numbers, and more), then flip through the cards.
 
-Same build setup as the Media Remote app, so the same GitHub Actions workflow produces the APK.
+## Install the APK
 
-## Getting the APK (the usual flow)
+1. Sign in to GitHub and open the **Actions** tab in this repo.
+2. Open the latest successful **Build APK** run.
+3. Download the artifact, unzip it, and you will find `spanishflashcard.apk` inside.
+4. On your Android device, allow "Install unknown apps" for your browser or files app, then open the APK to install it.
 
-1. Create a new repo on GitHub (public or private) for this project.
-2. Push this project's files to the repo's `main` branch.
-3. The **Build APK** workflow (`.github/workflows/build-apk.yml`) runs automatically on push. You can also trigger it manually from the Actions tab.
-4. When the run finishes, open it in the Actions tab and download the **spanish-flashcards-apk** artifact (you must be signed in to GitHub to download artifacts).
-5. Install `app-debug.apk` on your phone.
+## Building
 
-## Adding more cards
-
-Edit the `CARDS` array in `app/src/main/java/com/example/spanishflashcards/MainActivity.java` — each entry is `{"spanish", "english"}`. Commit and push; the workflow rebuilds the APK automatically.
+Every push to the `main` branch automatically builds a fresh APK via the Build APK workflow.
